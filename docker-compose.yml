@@ -10,14 +10,11 @@ services:
     env_file: ./client/.env
     volumes:
       - ./client/src:/app/src
-      - ./client/node_modules:/app/node_modules
-      - ./client/package.json:/app/package.json
 
   backend:
     build: ./backend
     ports:
-      - 7000:7000
+      - 9065:9065
     env_file: ./backend/.env
     volumes:
       - ./backend/src:/app/src
-      - ./backend/node_modules:/app/node_modules
